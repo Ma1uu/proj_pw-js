@@ -1,61 +1,57 @@
 let proximoId = 1
 
-function adicionarLinha(){
+function calcular(){
     //Entrada de valores do formulário
-   const A = document.getElementById('A').value;
-   const B = document.getElementById('B').value;
-   const C = document.getElementById('C').value;
+    const a = document.getElementById("a").value;
+    const b = document.getElementById("b").value;
+    const c = document.getElementById("c").value;
+    const x = document.getElementById("x").value;
 
-delta = B*B - 4*A*C;
-if (delta < 0) {
-    alert("A equação não tem solução real!")
-}
-   
-else if(delta === 0){
-    X1 = (-B + Math.sqrt(delta)) / (2*A);
-}
-   
-else if (delta > 0){
-    X1 = (-B + Math.sqrt(delta)) / (2*A);
-    X2 =  (-B - Math.sqrt(delta)) / (2*A);
-}
+    var delta = b*b - 4*a*c;
 
-
-   if (A === '' ||  B === '' || C === '')
-       alert("preencha todos os valores do Formulario!")
-else{
-//criar tabela
-var tabela = document.getElementById('tabeladados');
-var linha = tabela.insertRow(proximoId);
-var celula1 = linha.insertCell(0);
-var celula2 = linha.insertCell(1);
-var celula3 = linha.insertCell(2);
-
-//Cria uma linha na tabela se não existir
-const tabela = document.getElementById("tabelaDados") .getElementsByTagName('tbody') [0];
-
-//Inserindo uma nova linha
-const novalinha = tabela.insertRow();
-
-//inserindo os valores da linha
-const celId = novaLinha.insertCell(0);
-const celA = novaLinha.insertCell(1);
-const celB = novaLinha.insertCell(2);
-const celC = novaLinha.insertCell(3);
-const celX1 = novaLinha.insertCell(4);
-const celX2 = novaLinha.insertCell(5);
-
-//inserindo os valores dentro da celulas
-celId.innerHTML = proximoId;
-celA.innerHTML = A;
-celB.innerHTML = B;
-celC.innerHTML = C;
-celX1.innerHTML = X1;
-celX2.innerHTML = X2;
- 
-proximoId++
-
-//limpar formulario
-document.getElementById("linhaform").reset();
+    if (delta >= 0){
+        var x1 = (-b + Math.sqrt(delta)) / (2*a);
+        var x2 =  (-b - Math.sqrt(delta)) / (2*a);
+    }else{
+        var x1 = 'O delta é negativo. Equação não possui raízes reais';
+        var x2 =  'O delta é negativo. Equação não possui raízes reais';
     }
-}    
+
+
+    if(x == 1){
+        var res = x1;
+    }else if(x == 2){
+        var res = x2;
+    }else{
+        var res = 'Digite 1 ou 2';
+    }
+
+    //Se for preenchido vazio
+    if(a === '' || b === '' || c === '' || x === ''){
+        alert("Preencha os valores ausentes do formulário!")
+    }else {
+        //Cria uma linha na tabela se não existir
+        const tabela = document.getElementById("tabelaDados") .getElementsByTagName('tbody') [0];
+        //Inserindo uma nova linha
+        const novalinha = tabela.insertRow();
+        
+        //Inserindo os valores da linha
+        const celId = novalinha.insertCell(0);
+        const celA = novalinha.insertCell(1);
+        const celB = novalinha.insertCell(2);
+        const celC = novalinha.insertCell(3);
+        const celX = novalinha.insertCell(4);
+        
+        //Inserindo os valores dentro das celulas
+        celId.innerHTML = proximoId;
+        celA.innerHTML = a;
+        celB.innerHTML = b;
+        celC.innerHTML = c;
+        celX.innerHTML = res;
+        
+        proximoId++
+        
+        //Limpar formulário 
+        document.getElementById("linhaForm").reset();
+    }
+}

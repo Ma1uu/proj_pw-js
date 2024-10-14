@@ -1,42 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cálculo de Baskhara</title>
-    <link  rel="stylesheet" href="style.css">
+    <title>FormTable</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-<h1>Baskhara</h1>
-<hr>
-    <form id="linhaform">
-     <label for="A">Digite o valor de A:</label>
-     <input type="text" name="A" id="A" required>
-     <br><br>
-     <label for="B">Digite o valor de B:</label>
-     <input type="text" name="B" id="B" required>
-     <br><br>
-     <label for="C">Digite o valor de C:</label>
-     <input type="text" name="C" id="C" required>
-     <br><br>
-     <button type="button" onclick="adicionarLinha()">Adicionar</button>
+    <h1>Formulário bhaskara</h1>
+    <hr>
+    <form id="linhaForm">
+        <input type="number" name="" id="a" placeholder="Digite o valor de A:" required>
+        <br><br>
+        <input type="number" name="" id="b" placeholder="Digite o valor de B:" required>
+        <br><br>
+        <input type="number" name="" id="c" placeholder="Digite o valor de C:" required>
+        <br><br>
+        <input type="number" name="" id="x" placeholder="Digite o valor de X:" required>
+        <br><br>
+        <button type="button" onclick="calcular()">Calcular</button>
     </form>
-
-<br><br>
-    <table id="tabeladados">
+    <br><br>
+    <table id="tabelaDados">
         <thead>
             <tr>
-                <th>N°</th>
+                <th>Nº</th>
                 <th>A</th>
                 <th>B</th>
                 <th>C</th>
-                <th>X¹</th>
-                <th>X²</th>
+                <th>X</th>
             </tr>
         </thead>
-        <tbody>
-        </tbody>
+        <tbody></tbody>
     </table>
-    <script  src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 *{
-    background-color: antiquewhite;
+    background-color: rgb(254, 255, 184);
 }
 
 form{
@@ -22,10 +22,10 @@ table{
     width: 50%;
 }
 td,th{
-    border: 2px solid #ddd;
+    border: 2px solid #1d0909;
     text-align: left;
     padding: 8px;
-    border-color: rgb(75, 42, 42);
+    border-color: #1d1010;
 }
 
 tr:nth-child(even){
@@ -33,13 +33,13 @@ tr:nth-child(even){
 }
 
 h1{
-    color: rgb(54, 33, 33);
+    color: rgb(56, 21, 21);
 }
 
 hr{
-    border-color: rgb(54, 33, 33);
+    border-color: rgb(56, 21, 21);
 }
 
 button{
-    border-color: rgb(54, 33, 33);
+    border-color: rgb(56, 21, 21);
 }
