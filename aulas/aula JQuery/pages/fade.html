@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Fade</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+<style>
+body{
+    background-color: #19002e;
+}
+div {
+    width: 80px;
+    height: 80px;
+    display: none;                     
+    margin-bottom: 20px;               
+  }
+  img {
+    margin-left: 632px;
+    width: 100%;                       
+    height: 100%;                     
+    object-fit: cover;                 
+  }
+
+  p{
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    text-align: center;
+  }
+
+  button {
+        margin-left: 618px;
+        width: 110px;
+        height: 60px;
+        color:antiquewhite;
+        background-color: rgba(157, 116, 235, 0.993);
+        border-color:antiquewhite;
+    }
+
+</style>
+
+</head>
+<body>
+
+<p>Demonstração do fade.</p>
+
+<button>clique para as imagens aparecerem</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;"><img src="https://cdn-images.dzcdn.net/images/cover/d5e75753047eb8aa2fd2142c3d2d705c/0x1900-000000-80-0-0.jpg" alt=""></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;"><img src="https://upload.wikimedia.org/wikipedia/pt/7/71/Hit_Me_Hard_and_Soft.png" alt=""></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWCbw85PHUvTM6uqm7lSFuQDLehvnj2sBPxw&s" alt=""></div>
+
+</body>
+</html>

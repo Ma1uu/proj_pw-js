@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animation</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({left: '250px'});
+  });
+});
+</script> 
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #19002e;
+    }
+    div {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      left: 0px;  
+    }
+    img {
+      width: 100%;  
+      height: 100%; 
+      object-fit: cover; 
+      margin-left: 450px;
+    }
+    button {
+        margin-left: 600px;
+        width: 110px;
+        height: 60px;
+        color:antiquewhite;
+        background-color: rgba(157, 116, 235, 0.993);
+        border-color:antiquewhite;
+    }
+
+    p{
+    text-align: center;
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+  }
+    
+  </style>
+</head>
+<body>
+
+<button>Iniciar animação</button>
+
+<p>Clique no botão para iniciar a animação</p>
+<div><img src="https://content.imageresizer.com/images/memes/El-Gato-meme-6.jpg" alt=""></div>
+
+</body>
+</html>
